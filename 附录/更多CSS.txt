@@ -1,0 +1,88 @@
+伪元素
+用来选择元素的某些部分，有些部分不便于包围在<div><span>中
+first-letter：选择一个块元素文本中的第一个字母。
+first-line:第一行等等
+
+属性选择器：
+根据属性值选择元素
+img[width]{border:black thin solid;}包含width属性的图像
+img[height="300"]{border:red thin solid;}
+image[alt~="flowers"]{border:#ccc thin solid;}alt属性包含flowers的所有凸显
+
+按兄弟选择
+选择前面只有一个<h1>的段落
+h1 + p{
+
+}
+
+结合选择器
+.blue p {
+
+}blue类下的子孙所有段落
+-----
+构造复杂的选择器。
+1. 首先为你想要选择的元素定义上下文，如下所示：
+div#greentea>blockquote  id为greentea的div必须是blockquote的父元素
+
+2.给出想要选择的元素
+div#greentea>blockquote p 在<blockquote>上下文中选择元素。p必须是blockquote的一个子孙。
+
+3.指定伪类或者伪元素
+div#greentea>blockquote p:first-letter{}
+
+复杂选择器。
+
+----------------
+特定的CSS属性
+
+-开发商-属性
+如：-moz-transform
+如果打算使用这些可能改变或者不能交付的属性，就需要创建类似下面的css:
+
+div{
+transform:rotate(45deg);首先，列出通用属性，保证属性得到支持
+-webkit-transform:rotate(45deg)
+-moz-transform:rotate(45deg)
+}
+
+CSS变换和过渡
+见html
+
+-----------
+交互性
+
+通过JavaScript让html有自己可执行的内容，让页面有自己的行为。
+
+利用JavaScript 获取控件ID，得到句柄。然后通过句柄进行处理按键事件。
+<script>
+window.onload=init;
+function init(){
+var submitButton=document.getElementById("submitButton");
+submitButton.onclick=validBid;
+}
+
+function validBid(){
+if(document.getElementById("bid").value>0){
+document.getElementById("theForm").submit();
+}else{
+return false;
+}
+}
+</script>
+
+然后在html中创建一个表单，提交表单之前用脚本检查bid。
+<form id="theForm" method="post" action="contest.php">
+<input type="number" id="bid" value="0"><br>
+<input type="button" id="submitButton" value="Bid!"><br>
+</form>
+
+HTML5 API和Web应用
+
+一些工具:
+Dreamweaver
+Hype
+Coda
+Microsoft Expression web
+Flux
+Amaya
+Eclipse
