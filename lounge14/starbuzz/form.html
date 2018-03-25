@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset="utf-8" />
+    <title>The Starbuzz Bean Machine</title>
+  </head>
+  <body>
+    <h1>The Starbuzz Bean Machine</h1>
+    <h2>Fill out the form below and click submit to order</h2>
+    <form action="http://starbuzzcoffee.com/processorder.php" method="GET">
+	<p>Ship to:<br>
+    name:<input type="text" name="name" ><br> 
+    address:<input type="text" name="address" ><br> 
+    city:<input type="text" name="city" ><br> 
+    state:<input type="text" name="state" ><br> 
+    zip:<input type="text" name="zip" ><br> 
+    phone:<input type="tel" name="phone" > <br>
+	number of bags:<input type="number" name="bags" min="1" max="10"><br>
+	Must arrive by date:<input type="date" name="date">
+	</p>
+	<p>
+	Choose your beans:
+	<select name="beans">
+	<option value="House Blend">House Blend</option>
+	<option value="Bolivia">SG Bolivia Supremo</option>
+	<option value="Guatemala">Organic Guatemala</option>
+	</select>
+	</p>
+	<p>
+	Type:<br>
+	<input type="radio" checked value="whole" name="beantype">Whole bean<br>
+	<input type="radio" value="ground" name="beantype">Ground
+	</p>
+	<p>
+	Extras:<br>
+	<input type="checkbox" name="extras[]" value="giftwrap">Gift wrap<br>
+	<input type="checkbox" name="extras[]" value="catalog" checked>Include catalog with order
+	</p>
+	<p>Customer Comments:<br>
+	<textarea name="comments" rows="10" cols="40"></textarea>
+	</p>
+	<p>
+	<input type="submit" value="上传" />
+	</p>
+	</form>
+  </body>
+</html>
